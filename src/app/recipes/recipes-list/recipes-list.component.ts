@@ -13,6 +13,16 @@ export class RecipesListComponent implements OnInit {
       'This was made by an idiot like you',
       'https://picsum.photos/200/300'
     ),
+    new Recipe(
+      'This is another recipe',
+      'This was made by an idiot like you',
+      'https://picsum.photos/200/300'
+    ),
+    new Recipe(
+      'This is also a recipe',
+      'This was made by an idiot like you',
+      'https://picsum.photos/200/300'
+    ),
   ];
   constructor() {}
 
