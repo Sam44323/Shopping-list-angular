@@ -7,7 +7,11 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.scss'],
 })
 export class RecipesComponent implements OnInit {
-  currentRecipe: Recipe;
+  currentRecipe: Recipe = new Recipe(
+    'Recipe Name',
+    'Description for the recipe',
+    'https://picsum.photos/200/300'
+  );
   constructor() {}
 
   ngOnInit(): void {}
