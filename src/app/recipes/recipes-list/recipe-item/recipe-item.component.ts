@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-item',
@@ -12,7 +12,13 @@ export class RecipeItemComponent implements OnInit {
     description: string;
   };
   @Input('index') index: number;
+  @Output('recipeItemClick') recipeItemClick: EventEmitter<any> =
+    new EventEmitter<any>();
   constructor() {}
 
   ngOnInit(): void {}
+
+  setCurrentNav = () => {
+    this.recipeItemClick.emit(this.recipeItem);
+  };
 }
