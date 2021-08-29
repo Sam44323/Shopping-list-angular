@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Output('navHandler') navElementHandler: EventEmitter<string> =
+  @Output('navData') navElementHandler: EventEmitter<string> =
     new EventEmitter<string>();
 
   constructor() {}
