@@ -10,7 +10,6 @@ export class AppComponent {
   currentNav: string = 'Recipes';
 
   setCurrentNav = (data: string) => {
-    console.log(data);
     this.currentNav = data;
   };
 }
