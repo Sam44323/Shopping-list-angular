@@ -28,7 +28,7 @@ import { ShoppingService } from './shopping-list/shopping.service';
     DropdownDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [RecipeService, ShoppingService],
+  providers: [ShoppingService, RecipeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
