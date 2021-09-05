@@ -25,7 +25,7 @@ export class RecipeService {
 
   getRecipes = () => this.recipes.slice(); // returning the copy of the recipes array instead of the exact array pointer
 
-  setCurrentRecipe = (name, description, imagePath) => {
+  setCurrentRecipe = (name: string, description: string, imagePath: string) => {
     this.currentRecipe = {
       name,
       description,
