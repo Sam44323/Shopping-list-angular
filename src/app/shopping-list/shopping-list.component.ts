@@ -8,14 +8,14 @@ import { ShoppingService } from './shopping.service';
   styleUrls: ['./shopping-list.component.scss'],
 })
 export class ShoppingListComponent implements OnInit {
-  ingredient: Ingredient[] = [];
+  ingredients: Ingredient[] = [];
   constructor(private shoppingService: ShoppingService) {
     this.shoppingService.ingredientsChangeEmitter.subscribe((value) => {
-      this.ingredient = value;
+      this.ingredients = value;
     });
   }
 
   ngOnInit() {
-    this.ingredient = this.shoppingService.getIngredients();
+    this.ingredients = this.shoppingService.getIngredients();
   }
 }
