@@ -10,4 +10,12 @@ export class ShoppingService {
   ];
 
   getIngredients = () => this.ingredient.slice();
+
+  addNewIngredient = (data: Ingredient) => {
+    const { name, amount } = data;
+    this.ingredient.push({
+      name,
+      amount,
+    });
+  };
 }
