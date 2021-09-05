@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Ingredient } from 'src/app/utils/ingredient.model';
 import { RecipeService } from '../../recipe.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class RecipeItemComponent implements OnInit {
     name: string;
     imagePath: string;
     description: string;
+    ingredients: Ingredient[];
   };
   @Input('index') index: number;
   @Output('recipeItemClick') recipeItemClick: EventEmitter<any> =
