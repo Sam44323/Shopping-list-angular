@@ -8,8 +8,6 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./recipes-list.component.scss'],
 })
 export class RecipesListComponent implements OnInit {
-  @Output('currentRecipe') currentRecipe: EventEmitter<any> =
-    new EventEmitter<any>();
   recipes: Recipe[] = [];
   constructor(private recipesService: RecipeService) {}
 
@@ -18,6 +16,6 @@ export class RecipesListComponent implements OnInit {
   }
 
   setCurrentRecipe = (data: any) => {
-    this.currentRecipe.emit(data);
+    // this.currentRecipe.emit(data);
   };
 }

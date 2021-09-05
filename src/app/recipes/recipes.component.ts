@@ -9,17 +9,7 @@ import { RecipeService } from './recipe.service';
   providers: [RecipeService],
 })
 export class RecipesComponent implements OnInit {
-  currentRecipe: Recipe = new Recipe(
-    'Recipe Name',
-    'Description for the recipe',
-    'https://picsum.photos/200/300'
-  );
   constructor() {}
 
   ngOnInit(): void {}
-
-  setCurrentRecipe = (data: Recipe) => {
-    this.currentRecipe = data;
-    console.log(data);
-  };
 }

@@ -10,7 +10,6 @@
       *ngFor="let recipe of recipes; let index = index"
       [recipe]="recipe"
       [index]="index"
-      (recipeItemClick)="setCurrentRecipe($event)"
     ></app-recipe-item>
   </div>
 </div>

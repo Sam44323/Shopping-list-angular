@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -14,11 +15,11 @@ export class RecipeItemComponent implements OnInit {
   @Input('index') index: number;
   @Output('recipeItemClick') recipeItemClick: EventEmitter<any> =
     new EventEmitter<any>();
-  constructor() {}
+  constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {}
 
   setCurrentNav = () => {
-    this.recipeItemClick.emit(this.recipeItem);
+    this.recipeService.setCurrentRecipe(this.recipeItem);
   };
 }
