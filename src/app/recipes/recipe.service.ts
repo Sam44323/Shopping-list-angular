@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Injectable()
@@ -21,21 +21,7 @@ export class RecipeService {
     ),
   ];
 
-  private currentRecipe: Recipe = {} as any;
+  recipeSelected = new EventEmitter<Recipe>();
 
   getRecipes = () => this.recipes.slice(); // returning the copy of the recipes array instead of the exact array pointer
-
-  setCurrentRecipe = (data: Recipe) => {
-    const { name, description, imagePath } = data;
-    this.currentRecipe = {
-      name,
-      description,
-      imagePath,
-    };
-  };
-
-  getCurrentRecipe = () => {
-    console.log('working...');
-    return this.currentRecipe;
-  };
 }

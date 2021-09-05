@@ -20,6 +20,6 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit(): void {}
 
   setCurrentNav = () => {
-    this.recipeService.setCurrentRecipe(this.recipeItem);
+    this.recipeService.recipeSelected.emit(this.recipeItem);
   };
 }
